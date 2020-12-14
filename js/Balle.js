@@ -198,7 +198,7 @@ class Balle extends ElementHtml {
         }
         //perdu ?
         if (this._toucheCoteGauche()) {
-            joueur2.gagne();
+            joueur1.gagne();
         }
         if (this._toucheCoteDroite()) {
             joueur1.gagne();

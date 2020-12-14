@@ -38,7 +38,7 @@ class Joueur extends ElementHtml{
          * La vitesse de déplacement de la raquette
          * @type {number}
          */
-        this.vitesseY=3;
+        this.vitesseY=5;
         /**
          * Direction dans laquelle se déplace la raquette
          * -1 vers le haut
@@ -49,6 +49,7 @@ class Joueur extends ElementHtml{
         this.directionY=0;
         this.calculePositions();
         this.calculeTailles();
+        this.vie=5;
 
     }
     /**
@@ -120,11 +121,15 @@ class Joueur extends ElementHtml{
      */
     gagne(){
         //on aumente son score
-        this.incrementeScore(10);
+        this.incrementeScore(1);
         this._rafraichitHTML();
         audio.fausseNote();
         terrain.tilt();
         partie.demarreNouveauJeu();
+        if(this.score = 5){
+            console.log(salut)
+        }
+
     }
     /**
      * Applique les valeurs en CSS
@@ -133,6 +138,12 @@ class Joueur extends ElementHtml{
     _rafraichitHTML(){
         this.$element.css("top", this.haut); 
     }
-    
+    /**vie(){
+        this.vie();
+        if(this._toucheCoteGauche()){
+            this.vie -1;
+        }
+        if(thi.vie = 0)
+    }*/
 }
 
